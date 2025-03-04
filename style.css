@@ -1,0 +1,449 @@
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Share+Tech+Mono&display=swap');
+
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: url('./images/w12.jpg') no-repeat center center fixed;
+    background-size: cover;
+    overflow-x: hidden;
+    position: relative;
+    font-family: "Audiowide", sans-serif;
+}
+
+.bg {
+    position: fixed;
+    top: 0;
+    z-index: -20;
+}
+
+nav {
+    width: 100%;
+    height: 8vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: rgba(129, 148, 250, 0.1);
+    border: 2px solid rgb(0, 132, 255);
+    border-left: none;
+    border-right: none;
+    border-bottom-right-radius: 25px;
+    height: 100%;
+    width: 40%;
+    padding: 0px;
+    box-shadow: -1s0px 10px 30px black;
+}
+
+.ul-right {
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 0px;
+
+}
+
+nav li {
+    color: rgb(255, 255, 255);
+    list-style-type: none;
+    cursor: pointer;
+    font-size: 1rem;
+    text-shadow: 0px 1px 5px rgb(17, 124, 211);
+
+}
+
+nav a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+nav li:hover, nav li a:hover {
+    color: aqua;
+}
+
+.nav-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0px;
+    z-index: 50;
+}
+
+.navbar {
+    width: 20%;
+    height: 100%;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+   /* background-color: rgba(0, 255, 13, 0.5);
+    box-shadow: 0px 0px 6px rgb(85, 85, 85);
+     border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px; 
+    border: 5px solid rgba(255, 255, 255, 0.9); */
+}
+
+.navbar .techfest {
+    width: 160px;
+    
+}
+
+.logo {
+    width: 45px;
+    
+}
+
+.homepage {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.homepage video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -10;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    filter: blur(5px);
+}
+
+.homepage img {
+    width: 60%;
+    opacity: 1;
+    overflow: hidden;
+    object-fit: contain;
+}
+
+
+.technical-events {
+}
+
+.event-title {
+    width: 100%;
+    height: 2ovh;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-image: url('./images/frame-l.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat; */
+}
+
+
+.event-title h1 {
+    padding: 20px 60px;
+    text-align: center;
+    font-size: 1.4rem;
+    background-color: rgba(26, 49, 83, 0.2); 
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border: 3px solid rgb(33, 47, 250);
+    border-left: none;
+    border-right: none;
+    border-radius: 15px;
+    text-shadow: 0px 0px 5px black;
+    color: rgb(255, 255, 255);
+}
+
+
+.event-container {
+    margin-top: 50px;
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+.card {
+    width: 12%;
+    height: 60%;
+    background-color: rgba(58, 59, 105, 0.5);
+    border: 2px double rgb(17, 133, 241);
+    border-top: 2px double rgb(113, 186, 255);
+    border-bottom: 2px double rgb(113, 186, 255);
+
+    border-radius: 10px;
+    padding: 15px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.5s ease;
+}
+
+.c-front, .c-back {
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.c-front {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.c-back {
+    transform: rotateY(180deg);
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    background-color: rgb(0, 0, 0, .3);
+    background-blend-mode: darken;
+}
+
+
+.card:hover {
+    transform: rotateY(180deg);
+
+}
+
+.c-front img {
+    margin: 0%;
+    height: 80%;
+    width: 80%;
+    opacity: .7;
+}
+
+.c-btns {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.details-btn, .register-btn {
+    padding: 7px 5px;
+    width: 100%;
+    border: none;
+    border-radius: 7px;
+    font-size: 1rem;
+    font-weight: 100;
+    color: rgb(255, 251, 251);
+    cursor: pointer;
+    font-size: 1.1rem;
+
+}
+
+.details-btn:hover, .register-btn:hover {
+    font-size: .9rem;
+    transition: ease .2s;
+    color: aqua;
+}
+
+.details-btn {
+    background-color: rgb(255, 34, 19,0);
+    border: 1px solid rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
+}
+
+.c-btns a {
+    font-weight: 100;
+
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    width: 70%;
+}
+
+.register-btn {
+    background-color: rgba(17, 13, 255, 0);
+    border: 1px solid rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
+
+}
+
+.other-info {
+    width: 100%;
+    height: 60vh;
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.child {
+    width: 70%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.left-child {
+    width: 25%;
+    height: 80%;
+    background-color: rgba(143, 255, 152, 0.5);
+    border: 5px solid rgb(0, 255, 13);
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.right-child {
+    width: 50%;
+    height: 80%;
+    background-color: rgba(176, 253, 181, 0.5);
+    border-radius: 5px;
+    padding: 15px;
+}
+
+footer {
+    width: 100%;
+    height: 50vh;
+    margin-top: 50px;
+    background-color: rgba(5, 9, 43, 0.9);
+}
+
+footer h1 {
+    padding: 20px;
+    text-align: center;
+    color: rgb(223, 221, 255);
+    background-color: rgb(16, 55, 138);
+}
+
+
+
+@media (max-width: 480px) {  
+    
+    .homepage {
+        height: 80vh;
+    }
+    
+   .homepage video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+    
+    .title1 {
+        margin-top: 150px;
+    }
+    
+    nav {
+        width: 100%;
+        height: 7vh;
+        background-image: none;
+    }
+
+    nav ul {
+        display: none;
+    }
+    
+    .navbar .techfest {
+        width: 40%;
+    }
+    
+    .logo {
+        width: 12%;
+    }
+    
+    
+    .navbar {
+        width: 90%;
+        height: 100;
+        padding: 0px;
+        gap: 10px;
+        background-color: rgba(0, 132, 255, 1);
+        box-shadow: 0px 0px 36px black;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        border: 2px solid rgba(114, 114, 114, .9);
+    }
+    
+    .homepage img {
+        width: 80%;
+        margin-top: 40%;
+    }
+    
+    .event-title {
+        width: 70%;
+        margin-left: 15%;
+    }
+    
+    .event-title h1 {
+        font-size: .9rem;
+        background-color: rgb(0, 255, 255, .2);
+    }
+
+     .title1 {
+      font-size: .7rem;
+     }
+    
+    .event-container {
+        width: 100%;
+        height: 200vh;
+        display: flex;
+        gap: 20px;
+        flex-direction: column;
+    }
+    
+    .card {
+        width: 60%;
+        height: 40%;
+    }
+    
+    .child {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .left-child {
+        width: 100%;
+        border: 2px solid rgb(0, 255, 13);    
+        
+    }
+    
+    .right-child {
+        width: 100%;
+    }
+    
+
+    footer h1 {
+    font-size: .6rem;
+    }
+
+}  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
