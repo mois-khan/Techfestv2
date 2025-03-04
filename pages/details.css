@@ -2,13 +2,15 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background: url('/TechFest/images/w12.jpg') no-repeat center center fixed;
+/*     background: url('/TechFest/images/w12.jpg') no-repeat center center fixed;
     background-size: cover;
     overflow-x: hidden;
-    position: relative;
+    position: relative; */
+    background-color: midnightblue;
 }
 
 video {
+    display: none;
     position: fixed;
     top: 0;
     left: 0;
